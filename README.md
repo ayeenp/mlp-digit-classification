@@ -28,4 +28,4 @@ This notebook demonstrates the implementation of a simple neural network using N
 - **Performance Monitoring**: Monitored the training and validation accuracy and loss to ensure the model is learning effectively.
 
 ## Conclusion
-By manually implementing backpropagation with NumPy, we gained a deeper understanding of how neural networks learn and update their parameters. This foundational knowledge is crucial for understanding more complex deep learning frameworks.
+By manually implementing backpropagation with NumPy, I gained a deeper understanding of how neural networks learn and update their parameters. This foundational knowledge is crucial for understanding more complex deep learning frameworks.
