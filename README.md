@@ -1,19 +1,31 @@
-### Model Training Summary
+# MLP Handwritten Digit Classification
 
-#### Initial Issue
-The model initially struggled to converge due to a small learning rate. The learning rate was set too low, causing the model to update weights very slowly and preventing it from reaching the minimum point of the loss function.
+## Overview
+This notebook demonstrates the implementation of a simple neural network using NumPy and manual backpropagation. The goal is to understand the inner workings of neural networks by manually coding the forward and backward passes.
 
-#### Solution
-To address this issue, the learning rate was increased. This adjustment allowed the model to update weights more effectively and converge to the minimum point of the loss function.
+## Steps
 
-#### Training Accuracy
-After the learning rate adjustment, the model achieved high accuracy on the training set. This indicates that the model was able to learn the patterns in the training data effectively.
+### 1. Data Preparation
+- **Data Loading**: Loaded the dataset and prepared the input features and target labels.
+- **Normalization**: Normalized the input data to ensure that the features have similar scales, which helps in faster convergence.
 
-#### Validation Accuracy
-The accuracy on the validation set plateaued after a certain number of epochs. This plateau suggested that further training on the training set did not lead to improvements in validation performance. However, after additional epochs, the validation accuracy began to increase again, indicating some delayed improvements.
+### 2. Network Initialization
+- **Weights and Biases**: Initialized the weights and biases for each layer of the neural network. The weights were initialized randomly, and the biases were initialized to zero.
 
-#### Final Loss
-By the end of the training process, the loss for the training set was nearly zero. Despite this, the model did not overfit, as evidenced by the low loss values for both the validation and test sets. This balance suggests that the model was able to learn the training data well without memorizing it, maintaining good performance on unseen data.
+### 3. Forward Pass
+- **Linear Combination**: Computed the linear combination of inputs and weights for each layer.
+- **Activation Function**: Applied the activation function (e.g., sigmoid, ReLU) to introduce non-linearity into the model.
 
-#### Generalization
-The model demonstrated strong generalization capabilities. It performed well on unseen data, as indicated by the low loss and reasonable accuracy on the validation and test sets. This suggests that the model was able to capture the underlying patterns in the data rather than just memorizing the training examples.
+### 4. Loss Calculation
+- **Loss Function**: Used a loss function (e.g., Mean Squared Error, Cross-Entropy) to measure the difference between the predicted outputs and the actual target values.
+
+### 5. Backward Pass (Backpropagation)
+- **Gradient Calculation**: Calculated the gradients of the loss with respect to the weights and biases using the chain rule.
+- **Weight Updates**: Updated the weights and biases using the calculated gradients and a learning rate.
+
+### 6. Training Loop
+- **Epochs**: Repeated the forward and backward passes for a specified number of epochs.
+- **Performance Monitoring**: Monitored the training and validation accuracy and loss to ensure the model is learning effectively.
+
+## Conclusion
+By manually implementing backpropagation with NumPy, we gained a deeper understanding of how neural networks learn and update their parameters. This foundational knowledge is crucial for understanding more complex deep learning frameworks.
